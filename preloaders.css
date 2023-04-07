@@ -1,0 +1,167 @@
+@keyframes loaderAnimation{
+    0%{
+        width: 100%;
+        height: 100%;
+    }
+    50%{
+        width: 0%;
+        height: 0%;
+    }
+    100%{
+        width: 100%;
+        height: 100%;
+    }
+}
+@keyframes loadertwo{
+    0%{
+        width: 25px;
+        height: 25px;
+    }
+    100%{
+        width: 0%;
+        height: 0%;
+    }
+    /* 100%{
+        width: 25px;
+        height: 25px;
+    } */
+}
+@keyframes bgAnimate{
+    0%{
+        background-color: blue;
+        box-shadow: 0 0 50px rgba(0, 0, 255, 0.548);
+        box-shadow: 0 0 40px rgba(0, 0, 255, 0.695);
+        box-shadow: 0 0 30px rgba(0, 0, 255, 0.77);
+        box-shadow: 0 0 20px rgba(0, 0, 255, 0.818);
+    }
+    25%{
+        background-color: rgb(0, 234, 255);
+        box-shadow: 0 0 50px rgba(0, 234, 255, 0.449);
+        box-shadow: 0 0 40px rgba(0, 234, 255, 0.449);
+        box-shadow: 0 0 30px rgba(0, 234, 255, 0.449);
+        box-shadow: 0 0 20px rgba(0, 234, 255, 0.449);
+    }
+    50%{
+        background-color: greenyellow;
+        box-shadow: 0 0 50px rgba(172, 255, 47, 0.444);
+        box-shadow: 0 0 40px rgba(172, 255, 47, 0.523);
+        box-shadow: 0 0 30px rgba(172, 255, 47, 0.61);
+        box-shadow: 0 0 20px rgba(172, 255, 47, 0.707);
+    }
+    75%{
+        background-color: rgb(0, 234, 255);
+        box-shadow: 0 0 20px rgba(0, 234, 255, 0.466);
+    }
+    100%{
+        background-color: blue;
+        box-shadow: 0 0 20px rgba(0, 0, 255, 0.548);
+    }
+}
+@keyframes loaderone{
+    0%{
+        transform: rotate(0deg);
+    }
+    /* 50%{
+        transform: rotate(180deg);
+    } */
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes loaderThree{
+    0%{
+        stroke-dashoffset: 0;
+    }
+    100%{
+        stroke-dashoffset: 314;
+    }
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.hidden{
+    opacity: 0;
+}
+/* .loader{
+    display: flex;
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+.loader span{
+    position: absolute;
+    top: 100px;
+    left: 0;
+    display: flex;
+    height: 25px;
+    width: 25px;
+    border-radius: 25px;
+    background-color: black;
+    transform: rotate(calc(30deg * var(--i)));
+    transform-origin: 100px;
+    animation: loaderAnimation 2s infinite;
+} */
+.loader-container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    position: fixed;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+}
+.loader-container:nth-of-type(2){
+    background-color: crimson;
+}
+.loader-two{
+    display: flex;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+}
+.loader-two span{
+    position: absolute;
+    top: 100px;
+    left: 0;
+    display: flex;
+    height: 25px;
+    width: 25px;
+    border-radius: 25px;
+    background-color: black;
+    transform: rotate(calc(30deg * var(--i)));
+    transform-origin: 100px;
+    animation: loadertwo 1.2s infinite calc(0.1s * var(--i)), bgAnimate 2s infinite;
+    /* animation-delay: calc(0.1s * var(--i)); */
+}
+.loader-one{
+    display: flex;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    border: solid 20px;
+    border-top: solid 20px white;
+    transform: rotate(360deg);
+    animation: loaderone 2s linear infinite;
+}
+marquee{
+    color: violet;
+    height: 100vh;
+    font-size: 10vh;
+    text-shadow: 2px 3px 10px violet;
+}
+.loader-three{
+    display: flex;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+}
+.circle{
+    stroke: aqua;
+    stroke-width: 15px;
+    stroke-dasharray: 0 314;
+    stroke-dashoffset: 78.5;
+    animation: loaderThree 2s linear infinite;
+}

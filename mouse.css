@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    cursor: none;
+    background-color: black;
+}
+.hii{
+    position: fixed;
+    height: 5px;
+    width: 5px;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+.anim{
+    position: fixed;
+    height: 3px;
+    width: 3px;
+    border-radius: 3px;
+    top: 60px;
+    left: 500px;
+    background-color: white;
+    transition: all linear;
+    box-shadow: 0 0 1px red;
+    /* opacity: 0.5; */
+}
+button{
+    box-shadow: 0 0 5px red;;
+    position: fixed;
+    top:45vh;
+    left:45vw;
+    height: 20vh;
+    width: 10vw;
+    background: linear-gradient(0.1turn, rgb(0, 0, 0),rgb(66, 66, 66), rgb(0, 0, 0));
+    font-size: large;
+    border: none;
+    border-radius: 22000px;
+    z-index: 1;
+    transition: all 300ms linear;
+    overflow-x: hidden;
+}
+button div{
+    height: 20vh;
+    width: 10vw;
+    z-index: 0;
+    opacity: 0;
+    background: linear-gradient(0.1turn,rgb(66, 66, 66), rgb(0, 0, 0), rgb(66, 66, 66));
+}
+button div:hover{
+    transform: scale(1.2);
+    opacity: 1;
+    transition: all 500ms linear;
+}
+button:hover{
+    opacity: 1;
+    transform: scale(1.2);
+    transition: all 300ms linear;
+}

@@ -1,0 +1,138 @@
+@keyframes animate{
+    0%{
+        right: 200px;
+        top: 0;
+    /* }
+    50%{
+        right: 100px; */
+    }
+    100%{
+        top: 0;
+        right: -200px;
+    }
+}
+
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+}
+/* div{
+    height: ;
+} */
+.bigger{
+    padding: 2px;
+    transition: padding 0.3s;
+}
+.bigger:hover{
+    padding: 5px;
+}
+.arrow{
+    padding: 2px;
+    transition: padding 0.3s;
+    background: url('bg.png');
+    border-radius: 5vh;
+    display: flex;
+    overflow: hidden;
+    gap: 20px;
+}
+.arrow:hover{
+    padding-right: 50px;
+}
+.arrow-span{
+    display: flex;
+    height: 25px;
+    width: 5px;
+    background-color: black;
+    transform: rotate(45deg);
+    border-radius: 5vh;
+    animation: all 1s;
+}
+.high-arrow{
+    display: flex;
+    height: 25px;
+    width: 5px;
+    background-color: black;
+    transform: rotate(-45deg);
+    border-radius: 5vh;
+}
+.arrows{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0;
+}
+.color{
+    display: flex;
+    height: 50px;
+    width: 100px;
+    overflow: hidden;
+}
+.changing-color{
+    height: 50px;
+    width: 200px;
+    background: black;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10vh;
+}
+.background{
+    display: flex;
+    height: 100px;
+    width: 100px;
+    background: blue;
+    position: absolute;
+    right: 100px;
+    top: 0;
+    /* animation: animate 2s linear infinite; */
+    z-index: 0;
+}
+.round{
+    top: 0;
+    position: absolute;
+    right:20px;
+    display: flex;
+    height: 30px;
+    width: 10px;
+    border-radius: 100px;
+    overflow: hidden;
+    background-color: azure;
+    z-index: 2;
+}
+.round:nth-of-type(1){
+    transform : rotate(-45deg);
+    animation-delay: 1s;
+}
+.round:nth-of-type(2){
+    transform : rotate(45deg);
+    top: 15px;
+    animation-delay: 1s;
+}
+.round:nth-of-type(3){
+    right: 40px;
+    transform : rotate(-45deg);
+    animation-delay: 0.5s;
+}
+.round:nth-of-type(4){
+    right: 40px;
+    transform : rotate(45deg);
+    top: 15px;
+}
+.round:nth-of-type(5){
+    right: 60px;
+    transform : rotate(-45deg);
+    animation-delay: 0.5s;
+}
+.round:nth-of-type(6){
+    right: 60px;
+    transform : rotate(45deg);
+    top: 15px;
+}
+.hidden{
+    opacity: 0;
+}
+/* .bg{
+    background-color: yellow;
+} */
